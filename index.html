@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Crimea: A unified tourism destination platform featuring regions, experiences, curated trips, and smart travel planning.">
+    <title>Discover Crimea - Tourism Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <svg class="logo-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"></path>
+                </svg>
+                <span>Discover Crimea</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active" data-page="home">Home</a></li>
+                <li><a href="#regions" class="nav-link" data-page="regions">Regions</a></li>
+                <li><a href="#experiences" class="nav-link" data-page="experiences">Experiences</a></li>
+                <li><a href="#trips" class="nav-link" data-page="trips">Trip Ideas</a></li>
+                <li><a href="#planner" class="nav-link" data-page="planner">Trip Planner</a></li>
+                <li><a href="#resources" class="nav-link" data-page="resources">Resources</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main id="mainContent" role="main">
+        <!-- HOME PAGE -->
+        <section id="home" class="page" data-page="home">
+            <!-- HERO -->
+            <section class="hero" role="region" aria-label="Hero section">
+                <div class="hero-background" id="heroCarousel">
+                    <div class="hero-slide active" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <div class="hero-overlay"></div>
+                    </div>
+                    <div class="hero-slide" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <div class="hero-overlay"></div>
+                    </div>
+                    <div class="hero-slide" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <div class="hero-overlay"></div>
+                    </div>
+                </div>
+                <div class="hero-content">
+                    <h1 class="hero-title">Explore Crimea Your Way</h1>
+                    <p class="hero-subtitle">Discover stunning landscapes, rich culture, and unforgettable experiences</p>
+                    <div class="hero-cta">
+                        <button class="btn btn-primary" onclick="navigateTo('experiences')">Start Exploring</button>
+                        <button class="btn btn-secondary" onclick="navigateTo('planner')">Plan Your Trip</button>
+                    </div>
+                </div>
+                <div class="carousel-dots" id="carouselDots"></div>
+            </section>
+
+            <!-- QUICK SEARCH -->
+            <section class="quick-search-section" role="region" aria-label="Quick search">
+                <div class="container">
+                    <h2 class="section-title">Find Your Perfect Experience</h2>
+                    <div class="search-container">
+                        <input type="text" class="search-input" id="quickSearch" placeholder="Search destinations, activities, experiences..." aria-label="Search">
+                        <button class="search-button" aria-label="Search button">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="search-filters">
+                        <button class="filter-tag" data-filter="culture">🏛️ Culture</button>
+                        <button class="filter-tag" data-filter="nature">🏞️ Nature</button>
+                        <button class="filter-tag" data-filter="adventure">⛰️ Adventure</button>
+                        <button class="filter-tag" data-filter="wellness">🧘 Wellness</button>
+                        <button class="filter-tag" data-filter="food">🍽️ Cuisine</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FEATURED HIGHLIGHTS -->
+            <section class="featured-section" role="region" aria-label="Featured highlights">
+                <div class="container">
+                    <h2 class="section-title">Featured Highlights</h2>
+                    <div class="featured-grid">
+                        <article class="featured-card">
+                            <div class="card-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                            <div class="card-content">
+                                <span class="card-tag">Spring Festival</span>
+                                <h3>Spring Blossoms & Cultural Trails</h3>
+                                <p>Experience Crimea's rebirth with cherry blossoms, local festivals, and mountain hikes.</p>
+                                <a href="#trips" class="card-link">Explore →</a>
+                            </div>
+                        </article>
+                        <article class="featured-card">
+                            <div class="card-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                            <div class="card-content">
+                                <span class="card-tag">Beach Season</span>
+                                <h3>Coastal Relaxation & Water Sports</h3>
+                                <p>Pristine beaches, diving hotspots, and world-class windsurfing await.</p>
+                                <a href="#experiences" class="card-link">Discover →</a>
+                            </div>
+                        </article>
+                        <article class="featured-card">
+                            <div class="card-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                            <div class="card-content">
+                                <span class="card-tag">Mountain Explorer</span>
+                                <h3>Mountain Adventures & Hidden Gems</h3>
+                                <p>Trek through stunning peaks, explore ancient caves, and uncover local secrets.</p>
+                                <a href="#regions" class="card-link">Browse Regions →</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- REGIONS PREVIEW -->
+            <section class="regions-preview" role="region" aria-label="Region highlights">
+                <div class="container">
+                    <h2 class="section-title">Explore by Region</h2>
+                    <div class="regions-grid">
+                        <button class="region-card" onclick="navigateTo('regions', 'sevastopol')" aria-label="View Sevastopol">
+                            <div class="region-bg" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                            <h3>Sevastopol</h3>
+                            <p class="region-subtitle">Historic Harbor City</p>
+                        </button>
+                        <button class="region-card" onclick="navigateTo('regions', 'yalta')" aria-label="View Yalta">
+                            <div class="region-bg" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                            <h3>Yalta</h3>
+                            <p class="region-subtitle">Riviera Elegance</p>
+                        </button>
+                        <button class="region-card" onclick="navigateTo('regions', 'bakhchisaray')" aria-label="View Bakhchisaray">
+                            <div class="region-bg" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                            <h3>Bakhchisaray</h3>
+                            <p class="region-subtitle">Khan's Palace & Culture</p>
+                        </button>
+                        <button class="region-card" onclick="navigateTo('regions', 'simferopol')" aria-label="View Simferopol">
+                            <div class="region-bg" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
+                            <h3>Simferopol</h3>
+                            <p class="region-subtitle">Capital Gateway</p>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA SECTION -->
+            <section class="cta-section" role="region" aria-label="Call to action">
+                <div class="container">
+                    <div class="cta-content">
+                        <h2>Ready to Plan Your Adventure?</h2>
+                        <p>Use our Smart Trip Planner to get personalized recommendations based on your interests.</p>
+                        <button class="btn btn-primary btn-large" onclick="navigateTo('planner')">Start Planning →</button>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- REGIONS PAGE -->
+        <section id="regions" class="page" data-page="regions">
+            <div class="page-header">
+                <h1>Explore Crimea by Region</h1>
+                <p>Discover the unique character and attractions of each region</p>
+            </div>
+            <div class="container">
+                <div class="regions-detail-grid" id="regionsGrid"></div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCES PAGE -->
+        <section id="experiences" class="page" data-page="experiences">
+            <div class="page-header">
+                <h1>Discover Experiences</h1>
+                <p>Browse curated attractions organized by your interests</p>
+            </div>
+            <div class="container">
+                <div class="experiences-tabs" id="experienceTabs"></div>
+                <div class="experiences-content" id="experiencesContent"></div>
+            </div>
+        </section>
+
+        <!-- TRIPS PAGE -->
+        <section id="trips" class="page" data-page="trips">
+            <div class="page-header">
+                <h1>Curated Trip Ideas</h1>
+                <p>Explore pre-planned routes and itineraries</p>
+            </div>
+            <div class="container">
+                <div class="trips-grid" id="tripsGrid"></div>
+            </div>
+        </section>
+
+        <!-- TRIP PLANNER PAGE -->
+        <section id="planner" class="page" data-page="planner">
+            <div class="page-header">
+                <h1>Smart Trip Planner</h1>
+                <p>Tell us about your preferences and get a personalized itinerary</p>
+            </div>
+            <div class="container">
+                <div class="planner-container">
+                    <div class="planner-form" id="plannerForm">
+                        <div class="form-section">
+                            <h3>What are your interests?</h3>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" value="culture" class="form-checkbox"> Cultural & Historical
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" value="nature" class="form-checkbox"> Nature & Hiking
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" value="adventure" class="form-checkbox"> Adventure & Sports
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" value="wellness" class="form-checkbox"> Wellness & Spa
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" value="food" class="form-checkbox"> Cuisine & Dining
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>How many days do you have?</h3>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="duration" value="1-2" class="form-radio"> 1-2 days
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="duration" value="3-4" class="form-radio"> 3-4 days
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="duration" value="5-7" class="form-radio"> 5-7 days
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="duration" value="7+" class="form-radio"> 7+ days
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>What's your travel style?</h3>
+                            <select class="form-select">
+                                <option value="">Select your style...</option>
+                                <option value="solo">Solo Traveler</option>
+                                <option value="couple">Romantic Getaway</option>
+                                <option value="family">Family Adventure</option>
+                                <option value="group">Group Trip</option>
+                                <option value="luxury">Luxury Experience</option>
+                                <option value="budget">Budget-Friendly</option>
+                            </select>
+                        </div>
+
+                        <button class="btn btn-primary btn-large" onclick="generateItinerary()">Generate My Itinerary</button>
+                    </div>
+
+                    <div class="planner-output hidden" id="plannerOutput">
+                        <!-- Will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RESOURCES PAGE -->
+        <section id="resources" class="page" data-page="resources">
+            <div class="page-header">
+                <h1>Traveler Resources</h1>
+                <p>Practical information for planning your visit</p>
+            </div>
+            <div class="container">
+                <div class="resources-grid" id="resourcesGrid"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="#about">About Crimea</a></li>
+                    <li><a href="#about">Culture & Traditions</a></li>
+                    <li><a href="#about">Cuisine</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Future Features</h4>
+                <div class="feature-badges">
+                    <span class="badge">🤖 AI Trip Planner</span>
+                    <span class="badge">📱 Mobile App</span>
+                    <span class="badge">🎫 Booking Integration</span>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Discover Crimea. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script src="script.js"></script>
+</body>
+</html>

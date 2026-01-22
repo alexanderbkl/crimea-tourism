@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover Crimea: A unified tourism destination platform featuring regions, experiences, curated trips, and smart travel planning.">
+    <meta name="description"
+        content="Discover Crimea: A unified tourism destination platform featuring regions, experiences, curated trips, and smart travel planning.">
     <title>Discover Crimea - Tourism Platform</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- NAVIGATION -->
     <nav class="navbar">
@@ -54,12 +57,14 @@
                 </div>
                 <div class="hero-content">
                     <h1 class="hero-title" data-i18n="hero_title">Explore Crimea Your Way</h1>
-                    <p class="hero-subtitle" data-i18n="hero_subtitle">Discover stunning landscapes, rich culture, and unforgettable
+                    <p class="hero-subtitle" data-i18n="hero_subtitle">Discover stunning landscapes, rich culture, and
+                        unforgettable
                         experiences</p>
                     <div class="hero-cta">
                         <button class="btn btn-primary" onclick="navigateTo('experiences')" data-i18n="hero_cta_explore">Start
                             Exploring</button>
-                        <button class="btn btn-secondary" onclick="navigateTo('planner')" data-i18n="hero_cta_plan">Plan Your Trip</button>
+                        <button class="btn btn-secondary" onclick="navigateTo('planner')" data-i18n="hero_cta_plan">Plan
+                            Your Trip</button>
                     </div>
                 </div>
                 <div class="carousel-dots" id="carouselDots"></div>
@@ -68,10 +73,10 @@
             <!-- QUICK SEARCH -->
             <section class="quick-search-section" role="region" aria-label="Quick search">
                 <div class="container">
-                    <h2 class="section-title" data-i18n="search_title">Find Your Perfect Experience</h2>
+                    <h2 class="section-title" data-i18n="search_title">Найдите идеальный отдых</h2>
                     <div class="search-container">
                         <input type="text" class="search-input" id="quickSearch" data-i18n-placeholder="search_placeholder"
-                            placeholder="Search destinations, activities, experiences..." aria-label="Search">
+                            placeholder="Поиск направлений, активностей, впечатлений..." aria-label="Search">
                         <button class="search-button" aria-label="Search button">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <circle cx="11" cy="11" r="8"></circle>
@@ -80,11 +85,14 @@
                         </button>
                     </div>
                     <div class="search-filters">
-                        <button class="filter-tag" data-filter="culture" data-i18n="search_culture">🏛️ Culture</button>
-                        <button class="filter-tag" data-filter="nature" data-i18n="search_nature">🏞️ Nature</button>
-                        <button class="filter-tag" data-filter="adventure" data-i18n="search_adventure">⛰️ Adventure</button>
-                        <button class="filter-tag" data-filter="wellness" data-i18n="search_wellness">🧘 Wellness</button>
-                        <button class="filter-tag" data-filter="food" data-i18n="search_food">🍽️ Cuisine</button>
+                        <button class="filter-tag" data-filter="culture" data-i18n="search_culture">🏛️
+                            Культура</button>
+                        <button class="filter-tag" data-filter="nature" data-i18n="search_nature">🏞️ Природа</button>
+                        <button class="filter-tag" data-filter="adventure" data-i18n="search_adventure">⛰️
+                            Приключения</button>
+                        <button class="filter-tag" data-filter="wellness" data-i18n="search_wellness">🧘
+                            Оздоровление</button>
+                        <button class="filter-tag" data-filter="food" data-i18n="search_food">🍽️ Кухня</button>
                     </div>
                 </div>
             </section>
@@ -92,39 +100,43 @@
             <!-- FEATURED HIGHLIGHTS -->
             <section class="featured-section" role="region" aria-label="Featured highlights">
                 <div class="container">
-                    <h2 class="section-title" data-i18n="featured_title">Featured Highlights</h2>
+                    <h2 class="section-title" data-i18n="featured_title">Рекомендуемые направления</h2>
                     <div class="featured-grid">
                         <article class="featured-card">
                             <div class="card-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
                             <div class="card-content">
-                                <span class="card-tag" data-i18n="featured_spring_tag">Spring Festival</span>
-                                <h3 data-i18n="featured_spring_title">Spring Blossoms & Cultural Trails</h3>
-                                <p data-i18n="featured_spring_desc">Experience Crimea's rebirth with cherry blossoms, local festivals, and mountain
-                                    hikes.</p>
-                                <a href="#trips" class="card-link" data-i18n="featured_spring_link">Explore →</a>
+                                <span class="card-tag" data-i18n="featured_spring_tag">Весенний фестиваль</span>
+                                <h3 data-i18n="featured_spring_title">Весеннее цветение и культурные тропы</h3>
+                                <p data-i18n="featured_spring_desc">Познакомьтесь с возрождением Крыма: цветение вишни,
+                                    местные фестивали и горные походы.</p>
+                                <a href="#trips" class="card-link" data-i18n="featured_spring_link">Исследовать →</a>
                             </div>
                         </article>
                         <article class="featured-card">
                             <div class="card-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
                             <div class="card-content">
-                                <span class="card-tag" data-i18n="featured_beach_tag">Beach Season</span>
-                                <h3 data-i18n="featured_beach_title">Coastal Relaxation & Water Sports</h3>
-                                <p data-i18n="featured_beach_desc">Pristine beaches, diving hotspots, and world-class windsurfing await.</p>
-                                <a href="#experiences" class="card-link" data-i18n="featured_beach_link">Discover →</a>
+                                <span class="card-tag" data-i18n="featured_beach_tag">Пляжный сезон</span>
+                                <h3 data-i18n="featured_beach_title">Отдых на побережье и водные виды спорта</h3>
+                                <p data-i18n="featured_beach_desc">Чистые пляжи, места для дайвинга и виндсерфинг
+                                    мирового класса ждут вас.</p>
+                                <a href="#experiences" class="card-link" data-i18n="featured_beach_link">Открыть →</a>
                             </div>
                         </article>
                         <article class="featured-card">
                             <div class="card-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
                             <div class="card-content">
-                                <span class="card-tag" data-i18n="featured_mountain_tag">Mountain Explorer</span>
-                                <h3 data-i18n="featured_mountain_title">Mountain Adventures & Hidden Gems</h3>
-                                <p data-i18n="featured_mountain_desc">Trek through stunning peaks, explore ancient caves, and uncover local secrets.</p>
-                                <a href="#regions" class="card-link" data-i18n="featured_mountain_link">Browse Regions →</a>
+                                <span class="card-tag" data-i18n="featured_mountain_tag">Горный исследователь</span>
+                                <h3 data-i18n="featured_mountain_title">Горные приключения и скрытые жемчужины</h3>
+                                <p data-i18n="featured_mountain_desc">Идите по потрясающим вершинам, исследуйте древние
+                                    пещеры и откройте местные секреты.</p>
+                                <a href="#regions" class="card-link" data-i18n="featured_mountain_link">Просмотреть
+                                    регионы →</a>
                             </div>
                         </article>
                     </div>
                 </div>
             </section>
+
 
             <!-- REGIONS PREVIEW -->
             <section class="regions-preview" role="region" aria-label="Region highlights">
@@ -144,7 +156,8 @@
                         <button class="region-card" onclick="navigateTo('regions', 'bakhchisaray')" aria-label="View Bakhchisaray">
                             <div class="region-bg" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
                             <h3 data-i18n="region_bakhchisaray">Bakhchisaray</h3>
-                            <p class="region-subtitle" data-i18n="region_bakhchisaray_subtitle">Khan's Palace & Culture</p>
+                            <p class="region-subtitle" data-i18n="region_bakhchisaray_subtitle">Khan's Palace & Culture
+                            </p>
                         </button>
                         <button class="region-card" onclick="navigateTo('regions', 'simferopol')" aria-label="View Simferopol">
                             <div class="region-bg" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
@@ -160,7 +173,8 @@
                 <div class="container">
                     <div class="cta-content">
                         <h2 data-i18n="cta_ready">Ready to Plan Your Adventure?</h2>
-                        <p data-i18n="cta_description">Use our Smart Trip Planner to get personalized recommendations based on your interests.
+                        <p data-i18n="cta_description">Use our Smart Trip Planner to get personalized recommendations
+                            based on your interests.
                         </p>
                         <button class="btn btn-primary btn-large" onclick="navigateTo('planner')" data-i18n="cta_button">Start Planning
                             →</button>
@@ -202,87 +216,87 @@
                 <div class="trips-grid" id="tripsGrid"></div>
             </div>
         </section>
-
+        
         <!-- TRIP PLANNER PAGE -->
-        <section id="planner" class="page" data-page="planner">
-            <div class="page-header">
-                <h1 data-i18n="planner_smart">Smart Trip Planner</h1>
-                <p data-i18n="planner_smart_desc">Tell us about your preferences and get a personalized itinerary</p>
-            </div>
-            <div class="container">
-                <div class="planner-container">
-                    <div class="planner-form" id="plannerForm">
-                        <div class="form-section">
-                            <h3 data-i18n="planner_interests">What are your interests?</h3>
-                            <div class="checkbox-group">
-                                <label class="checkbox-label">
-                                    <input type="checkbox" value="culture" class="form-checkbox"> <span data-i18n="planner_interest_culture">Cultural &
-                                        Historical</span>
-                                </label>
-                                <label class="checkbox-label">
-                                    <input type="checkbox" value="nature" class="form-checkbox"> <span data-i18n="planner_interest_nature">Nature &
-                                        Hiking</span>
-                                </label>
-                                <label class="checkbox-label">
-                                    <input type="checkbox" value="adventure" class="form-checkbox"> <span data-i18n="planner_interest_adventure">Adventure &
-                                        Sports</span>
-                                </label>
-                                <label class="checkbox-label">
-                                    <input type="checkbox" value="wellness" class="form-checkbox"> <span data-i18n="planner_interest_wellness">Wellness &
-                                        Spa</span>
-                                </label>
-                                <label class="checkbox-label">
-                                    <input type="checkbox" value="food" class="form-checkbox"> <span data-i18n="planner_interest_food">Cuisine &
-                                        Dining</span>
-                                </label>
+<section id="planner" class="page" data-page="planner">
+    <div class="page-header">
+        <h1 data-i18n="planner_smart">Умный планировщик поездок</h1>
+        <p data-i18n="planner_smart_desc">Расскажите о ваших предпочтениях и получите персонализированный маршрут</p>
+        </div>
+        <div class="container">
+            <div class="planner-container">
+                <div class="planner-form" id="plannerForm">
+                    <div class="form-section">
+                    <h3 data-i18n="planner_interests">Какие у вас интересы?</h3>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="culture" class="form-checkbox"> <span data-i18n="planner_interest_culture">Культура и
+                                история</span>
+                            </label>
+                            <label class="checkbox-label">
+                            <input type="checkbox" value="nature" class="form-checkbox"> <span data-i18n="planner_interest_nature">Природа и
+                                походы</span>
+                            </label>
+                            <label class="checkbox-label">
+                            <input type="checkbox" value="adventure" class="form-checkbox"> <span data-i18n="planner_interest_adventure">Приключения
+                                и спорт</span>
+                            </label>
+                            <label class="checkbox-label">
+                            <input type="checkbox" value="wellness" class="form-checkbox"> <span data-i18n="planner_interest_wellness">Оздоровление
+                                и спа</span>
+                            </label>
+                            <label class="checkbox-label">
+                            <input type="checkbox" value="food" class="form-checkbox"> <span data-i18n="planner_interest_food">Кухня и
+                                рестораны</span>
+                            </label>
                             </div>
-                        </div>
-
-                        <div class="form-section">
-                            <h3 data-i18n="planner_duration">How many days do you have?</h3>
-                            <div class="radio-group">
-                                <label class="radio-label">
-                                    <input type="radio" name="duration" value="1-2" class="form-radio"> <span data-i18n="planner_duration_1_2">1-2
-                                        days</span>
-                                </label>
-                                <label class="radio-label">
-                                    <input type="radio" name="duration" value="3-4" class="form-radio"> <span data-i18n="planner_duration_3_4">3-4
-                                        days</span>
-                                </label>
-                                <label class="radio-label">
-                                    <input type="radio" name="duration" value="5-7" class="form-radio"> <span data-i18n="planner_duration_5_7">5-7
-                                        days</span>
-                                </label>
-                                <label class="radio-label">
-                                    <input type="radio" name="duration" value="7+" class="form-radio"> <span data-i18n="planner_duration_7_plus">7+
-                                        days</span>
-                                </label>
                             </div>
+
+                <div class="form-section">
+                    <h3 data-i18n="planner_duration">Сколько дней у вас есть?</h3>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="duration" value="1-2" class="form-radio"> <span data-i18n="planner_duration_1_2">1-2
+                                дня</span>
+                            </label>
+                            <label class="radio-label">
+                            <input type="radio" name="duration" value="3-4" class="form-radio"> <span data-i18n="planner_duration_3_4">3-4
+                                дня</span>
+                            </label>
+                            <label class="radio-label">
+                            <input type="radio" name="duration" value="5-7" class="form-radio"> <span data-i18n="planner_duration_5_7">5-7
+                                дней</span>
+                            </label>
+                            <label class="radio-label">
+                            <input type="radio" name="duration" value="7+" class="form-radio"> <span data-i18n="planner_duration_7_plus">7+
+                                дней</span>
+                            </label>
+                            </div>
+                            </div>
+
+                <div class="form-section">
+                    <h3 data-i18n="planner_style">Какой у вас стиль путешествий?</h3>
+                    <select class="form-select">
+                        <option value="" data-i18n="planner_style_select">Выберите стиль...</option>
+                        <option value="solo" data-i18n="planner_style_solo">Одиночный путешественник</option>
+                        <option value="couple" data-i18n="planner_style_couple">Романтическая поездка</option>
+                        <option value="family" data-i18n="planner_style_family">Семейное приключение</option>
+                        <option value="group" data-i18n="planner_style_group">Групповая поездка</option>
+                        <option value="luxury" data-i18n="planner_style_luxury">Люкс-опыт</option>
+                        <option value="budget" data-i18n="planner_style_budget">Бюджетный вариант</option>
+                        </select>
                         </div>
 
-                        <div class="form-section">
-                            <h3 data-i18n="planner_style">What's your travel style?</h3>
-                            <select class="form-select">
-                                <option value="" data-i18n="planner_style_select">Select your style...</option>
-                                <option value="solo" data-i18n="planner_style_solo">Solo Traveler</option>
-                                <option value="couple" data-i18n="planner_style_couple">Romantic Getaway</option>
-                                <option value="family" data-i18n="planner_style_family">Family Adventure</option>
-                                <option value="group" data-i18n="planner_style_group">Group Trip</option>
-                                <option value="luxury" data-i18n="planner_style_luxury">Luxury Experience</option>
-                                <option value="budget" data-i18n="planner_style_budget">Budget-Friendly</option>
-                            </select>
-                        </div>
-
-                        <button class="btn btn-primary btn-large" onclick="generateItinerary()" data-i18n="planner_generate">Generate My
-                            Itinerary</button>
-                    </div>
-
-                    <div class="planner-output hidden" id="plannerOutput">
-                        <!-- Will be populated by JavaScript -->
-                    </div>
+                <button class="btn btn-primary btn-large" onclick="generateItinerary()" data-i18n="planner_generate">Создать мой
+                    маршрут</button>
                 </div>
+
+            <div class="planner-output hidden" id="plannerOutput">
+                <!-- Will be populated by JavaScript -->
             </div>
-        </section>
+            </div>
+            </div>
+            </section>
 
         <!-- RESOURCES PAGE -->
         <section id="resources" class="page" data-page="resources">
@@ -300,31 +314,31 @@
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-section">
-                <h4 data-i18n="footer_about">About</h4>
+                <h4 data-i18n="footer_about">О нас</h4>
                 <ul>
-                    <li><a href="#about" data-i18n="footer_about_crimea">About Crimea</a></li>
-                    <li><a href="#about" data-i18n="footer_culture">Culture & Traditions</a></li>
-                    <li><a href="#about" data-i18n="footer_cuisine">Cuisine</a></li>
+                    <li><a href="#about" data-i18n="footer_about_crimea">О Крыме</a></li>
+                    <li><a href="#about" data-i18n="footer_culture">Культура и традиции</a></li>
+                    <li><a href="#about" data-i18n="footer_cuisine">Кухня</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h4 data-i18n="footer_support">Support</h4>
+                <h4 data-i18n="footer_support">Поддержка</h4>
                 <ul>
-                    <li><a href="#" data-i18n="footer_privacy">Privacy Policy</a></li>
-                    <li><a href="#" data-i18n="footer_accessibility">Accessibility</a></li>
-                    <li><a href="#" data-i18n="footer_contact">Contact Us</a></li>
+                    <li><a href="#" data-i18n="footer_privacy">Политика конфиденциальности</a></li>
+                    <li><a href="#" data-i18n="footer_accessibility">Доступность</a></li>
+                    <li><a href="#" data-i18n="footer_contact">Связаться с нами</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h4 data-i18n="footer_future_features">Future Features</h4>
+                <h4 data-i18n="footer_future_features">Будущие функции</h4>
                 <div class="feature-badges">
-                    <span class="badge" data-i18n="footer_ai_trip_planner">🤖 AI Trip Planner</span>
-                    <span class="badge" data-i18n="footer_mobile_app">📱 Mobile App</span>
-                    <span class="badge" data-i18n="footer_booking_integration">🔗 Booking Integration</span>
+                    <span class="badge" data-i18n="footer_ai_trip_planner">🤖 Планировщик поездок ИИ</span>
+                    <span class="badge" data-i18n="footer_mobile_app">📱 Мобильное приложение</span>
+                    <span class="badge" data-i18n="footer_booking_integration">🔗 Интеграция бронирования</span>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p data-i18n="footer_rights">&copy; 2026 Discover Crimea. All rights reserved.</p>
+                <p data-i18n="footer_rights">&copy; 2026 Открой Крым. Все права защищены.</p>
             </div>
         </div>
     </footer>
@@ -332,4 +346,5 @@
     <!-- SCRIPT -->
     <script src="script.js"></script>
 </body>
+
 </html>

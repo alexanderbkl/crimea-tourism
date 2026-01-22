@@ -1453,6 +1453,7 @@ body {
 /* ========== EXPERIENCES ========== */
 .experiences-tabs {
     display: flex;
+    color: white;
     gap: var(--space-12);
     justify-content: center;
     flex-wrap: wrap;
@@ -1585,7 +1586,7 @@ body {
 }
 
 .trip-highlights li:before {
-    content: 'âœ“ ';
+    content: '📅 ';
     color: var(--color-success);
     font-weight: var(--font-weight-bold);
     margin-right: var(--space-8);

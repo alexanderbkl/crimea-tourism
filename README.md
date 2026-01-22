@@ -6,6 +6,7 @@
 ### TO VIEW TRACKER DATA at https://crimea-tracker.fly.dev
 fly logs           # Real-time
 fly ssh console    # cat /data/visits.jsonl
+to list visits visit: https://crimea-tracker.fly.dev/stats
 
 A **100% static, single-page tourism destination platform** for Discover Crimea. Fully functional without backend, APIs, or build processes. Perfect for GitHub Pages deployment and local development.
 

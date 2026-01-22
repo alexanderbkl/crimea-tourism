@@ -3,6 +3,78 @@
    Client-side routing & interactivity
    ============================================ */
 
+// ========== TRANSLATION SYSTEM ==========
+let translations = {};
+let currentLanguage = 'ru'; // Default to Russian
+
+async function loadTranslations() {
+    try {
+        const response = await fetch('translations.json');
+        const data = await response.json();
+        translations = data.translations;
+        
+        // Load saved language preference or default to Russian
+        const savedLang = localStorage.getItem('language') || 'ru';
+        setLanguage(savedLang);
+    } catch (error) {
+        console.error('Failed to load translations:', error);
+        currentLanguage = 'ru';
+    }
+}
+
+function setLanguage(lang) {
+    if (!translations[lang]) {
+        console.warn(`Language ${lang} not found, defaulting to Russian`);
+        lang = 'ru';
+    }
+    
+    currentLanguage = lang;
+    localStorage.setItem('language', lang);
+    
+    // Update document language
+    document.documentElement.lang = lang;
+    
+    // Update meta tags
+    document.querySelector('meta[name="description"]').content = translations[lang].description || '';
+    document.title = translations[lang].title || 'Discover Crimea';
+    
+    // Update all elements with data-i18n attribute
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[lang][key]) {
+            element.textContent = translations[lang][key];
+        }
+    });
+    
+    // Update all elements with data-i18n-placeholder attribute
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+        const key = element.getAttribute('data-i18n-placeholder');
+        if (translations[lang][key]) {
+            element.placeholder = translations[lang][key];
+        }
+    });
+    
+    // Update language switcher button
+    updateLanguageSwitcher();
+}
+
+function toggleLanguage() {
+    const newLang = currentLanguage === 'en' ? 'ru' : 'en';
+    setLanguage(newLang);
+}
+
+function updateLanguageSwitcher() {
+    const switcher = document.getElementById('languageSwitcher');
+    if (switcher) {
+        switcher.textContent = currentLanguage === 'en' ? 'RU' : 'EN';
+        switcher.setAttribute('aria-label', currentLanguage === 'en' ? 'Switch to Russian' : 'Switch to English');
+    }
+}
+
+function t(key) {
+    return translations[currentLanguage]?.[key] || key;
+}
+
 // ========== DATA FIXTURES ==========
 const regionsData = {
     sevastopol: {
@@ -59,31 +131,31 @@ const experiencesData = {
     culture: [
         { icon: 'ðŸ›ï¸', title: 'Chersonesus Taurica', desc: 'Ancient Greek ruins and archaeological wonders' },
         { icon: 'ðŸ‘‘', title: 'Royal Palaces', desc: 'Exquisite 19th-century palaces and estates' },
-        { icon: 'ðŸŽ­', title: 'Cultural Festivals', desc: 'Music, dance, and traditional celebrations' },
+        { icon: '🎭', title: 'Cultural Festivals', desc: 'Music, dance, and traditional celebrations' },
         { icon: 'ðŸº', title: 'Museums & Galleries', desc: 'Art, history, and ethnographic collections' },
     ],
     nature: [
         { icon: 'ðŸžï¸', title: 'Mountain Trails', desc: 'Scenic hiking through Crimean peaks' },
         { icon: 'ðŸ–ï¸', title: 'Beach Paradise', desc: 'Pristine coastlines and hidden coves' },
-        { icon: 'ðŸŒ²', title: 'Nature Reserves', desc: 'Protected ecosystems and wildlife viewing' },
-        { icon: 'â›°ï¸', title: 'Cave Explorations', desc: 'Limestone caves with ancient history' },
+        { icon: '🌲', title: 'Nature Reserves', desc: 'Protected ecosystems and wildlife viewing' },
+        { icon: '⛰️', title: 'Cave Explorations', desc: 'Limestone caves with ancient history' },
     ],
     adventure: [
         { icon: 'ðŸ„', title: 'Windsurfing', desc: 'World-class watersports conditions' },
-        { icon: 'ðŸ¤¿', title: 'Scuba Diving', desc: 'Underwater wrecks and marine life' },
-        { icon: 'ðŸš´', title: 'Cycling Routes', desc: 'Multi-day trails through scenic countryside' },
-        { icon: 'ðŸª‚', title: 'Paragliding', desc: 'Soar above mountains and coastlines' },
+        { icon: '🤿', title: 'Scuba Diving', desc: 'Underwater wrecks and marine life' },
+        { icon: '🚴', title: 'Cycling Routes', desc: 'Multi-day trails through scenic countryside' },
+        { icon: '🪂', title: 'Paragliding', desc: 'Soar above mountains and coastlines' },
     ],
     wellness: [
-        { icon: 'ðŸ§˜', title: 'Spa Retreats', desc: 'Mineral springs and therapeutic treatments' },
+        { icon: '🧘', title: 'Spa Retreats', desc: 'Mineral springs and therapeutic treatments' },
         { icon: 'ðŸ¨', title: 'Health Resorts', desc: 'Historic sanatoria with healing traditions' },
-        { icon: 'ðŸŒ¿', title: 'Wellness Programs', desc: 'Yoga, meditation, and holistic health' },
+        { icon: '🌿', title: 'Wellness Programs', desc: 'Yoga, meditation, and holistic health' },
         { icon: 'ðŸ’†', title: 'Thalassotherapy', desc: 'Sea-based therapeutic experiences' },
     ],
     food: [
         { icon: 'ðŸ½ï¸', title: 'Crimean Cuisine', desc: 'Traditional dishes with Mediterranean influence' },
         { icon: 'ðŸ·', title: 'Wine Tastings', desc: 'Local vineyards and winery tours' },
-        { icon: 'ðŸ¥˜', title: 'Cooking Classes', desc: 'Learn authentic recipes from locals' },
+        { icon: '🥘', title: 'Cooking Classes', desc: 'Learn authentic recipes from locals' },
         { icon: 'ðŸª', title: 'Market Tours', desc: 'Fresh produce and artisanal products' },
     ]
 };
@@ -135,12 +207,12 @@ const tripsData = [
 
 const resourcesData = [
     {
-        icon: 'âœˆï¸',
+        icon: '✈️',
         title: 'Entry & Getting Here',
         desc: 'Information about flights, ferries, and border procedures for visitors.'
     },
     {
-        icon: 'ðŸšŒ',
+        icon: '🚌',
         title: 'Transport & Mobility',
         desc: 'Public transit, car rentals, taxis, and navigating within Crimea.'
     },
@@ -155,12 +227,12 @@ const resourcesData = [
         desc: 'Mobile networks, Wi-Fi hotspots, and staying connected.'
     },
     {
-        icon: 'ðŸ›¡ï¸',
+        icon: '🛡️',
         title: 'Safety & Etiquette',
         desc: 'Local customs, cultural sensitivity, and travel safety guidance.'
     },
     {
-        icon: 'â™»ï¸',
+        icon: '♻️',
         title: 'Sustainability',
         desc: 'Eco-responsible travel practices and protecting local environments.'
     }
@@ -290,8 +362,10 @@ function switchTab(category) {
     // Update active tab
     document.querySelectorAll('.tab-button').forEach(btn => {
         btn.classList.remove('active');
+        if (btn.onclick && btn.onclick.toString().includes(`'${category}'`)) {
+            btn.classList.add('active');
+        }
     });
-    event.target?.classList.add('active');
     
     // Update content
     const content = document.getElementById('experiencesContent');
@@ -381,7 +455,7 @@ function generateItinerary() {
     
     output.innerHTML = `
         <div style="margin-bottom: 2rem;">
-            <h3 style="font-size: 1.5rem; color: var(--color-primary); margin-bottom: 1rem;">âœ¨ Your Personalized Itinerary</h3>
+            <h3 style="font-size: 1.5rem; color: var(--color-primary); margin-bottom: 1rem;">✨ Your Personalized Itinerary</h3>
             <p style="color: var(--color-text-light); margin-bottom: 2rem;">Based on your ${interests.join(', ')} interests for ${duration} days</p>
         </div>
         <div class="itinerary-grid">
@@ -396,7 +470,7 @@ function generateItinerary() {
             `).join('')}
         </div>
         <div style="margin-top: 2rem; text-align: center;">
-            <button class="btn btn-secondary" onclick="resetPlanner()">â† Back to Planner</button>
+            <button class="btn btn-secondary" onclick="resetPlanner()">← Back to Planner</button>
             <button class="btn btn-primary" onclick="alert('Saving itinerary... (Future: Connect to backend)')">ðŸ’¾ Save Itinerary</button>
         </div>
     `;
@@ -470,7 +544,10 @@ window.addEventListener('hashchange', () => {
 });
 
 // ========== INITIALIZATION ==========
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+    // Load translations first
+    await loadTranslations();
+    
     initCarousel();
     initNavigation();
     

@@ -965,7 +965,7 @@ body {
 .hamburger span {
     width: 24px;
     height: 2px;
-    background-color: var(--color-text);
+    background-color: black;
     border-radius: var(--radius-sm);
     transition: all var(--transition-normal);
 }

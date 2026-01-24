@@ -1,5 +1,7 @@
 # Discover Crimea - Tourism Platform Prototype
 
+NOTE BY ALEX: I'm open for work in case of someone needing something similar, reach me at abaikalov@uoc.edu
+
 ## 📍 Project Overview
 
 

@@ -1,8 +1,9 @@
 # Discover Crimea - Tourism Platform Prototype
 
-(PREVIEW WEBSITE MVP)[https://alexanderbkl.github.io/crimea-tourism]
+[PREVIEW WEBSITE MVP](https://alexanderbkl.github.io/crimea-tourism)
 
-NOTE BY ALEX: I'm open for work in case of someone needing something similar, reach me at abaikalov@uoc.edu
+NOTE BY ALEX: I'm open for freelance work in case of someone needing something similar, reach me at abaikalov@uoc.edu
+visit my profile for more cool projects!
 
 ## 📍 Project Overview
 
